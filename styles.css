@@ -1,0 +1,548 @@
+@import url(./reset.css);
+
+:root{
+    --VeryDarkBlue: hsl(243, 87%, 12%);
+    --DesaturatedBlue: hsl(238, 22%, 44%);
+
+    --BrightBlue: hsl(224, 93%, 58%);
+    --ModerateCyan: hsl(170, 45%, 43%);
+
+    --LightGrayishBlue: hsl(240, 75%, 98%);
+    --LightGray: hsl(0, 0%, 75%);
+}
+
+html, body{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    position: relative;
+    font-family: 'Open Sans';
+}
+main{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+h1, h2, strong, button{
+    font-family: 'Raleway';
+}
+p{
+    font-size: clamp(0.9rem, 1.2vw, 1.2rem);
+}
+.top{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 4vw 5vw;
+    width: 100%;
+    img{
+        width: 10vw;
+    }
+}
+.topright{
+    display: flex;
+    gap: 4vw;
+}
+.topright p:hover{
+    transition: 0.2s;
+    text-decoration: underline;
+    font-weight: 700;
+    cursor: pointer;
+}
+h1{
+    font-size: clamp(2rem, 3vw, 3rem);
+    line-height: clamp(2.8rem, 4.3vw, 3.8rem);
+    margin: 0 0 1vw;
+}
+h2{
+    font-size: clamp(1.2rem, 2vw, 2rem);
+    line-height: clamp(1.7rem, 2.8vw, 2rem);
+    margin: 0 0 0.8vw;
+}
+.first-div{
+    display: grid;
+    grid-template-columns: 50% 50%;
+    width: 100%;
+    padding: 0 5vw;
+    > div{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    img{
+        width: 100%;
+    }
+    p{
+        margin: 0 0 2vw;
+        padding: 0 2vw 0 0;
+        font-size: clamp(0.9rem, 1.4vw, 1.4rem);
+    }
+    form{
+        display: flex;
+        width: 80%;
+        gap: 1.5vw;
+        input{
+            outline: none;
+            border: 2px solid black;
+            padding: 0 1.5vw;
+            border-radius: 0.25vw;
+        }
+        input::placeholder{
+            color: var(--LightGray);
+        }
+        button{
+            padding: 0;
+        }
+    }
+}
+.second-div{
+    background: url(./images/bg-curve-desktop.svg);
+    background-repeat: no-repeat;
+    background-position: center top;
+    background-size: contain;
+    padding: 9vw 6vw;
+    margin: 5vw 0 0;
+    display: grid;
+    grid-template-columns: 50% 50%;
+    position: relative;
+    .second-left{
+        display: flex;
+        flex-direction: column;
+        h1{
+            margin: 0 0 1vw;
+        }
+        >p{
+            margin: 0 0 1vw;
+            padding: 0 4vw 0 0;
+        }
+    }
+    >img{
+        margin: auto 0 auto auto;
+        width: 100%;
+    }
+}
+.second-div::before{
+    position: absolute;
+    background-color: var(--LightGrayishBlue);
+    content: '';
+    top: 7.6vw;
+    left: 0;
+    height: calc(100% - 7.6vw);
+    width: 100%;
+    z-index: -1;
+}
+.underline{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    gap: 0.5vw;
+    width: fit-content;
+    color: var(--ModerateCyan);
+    cursor: pointer;
+    svg{
+        width: 1.3rem;
+    }
+}
+.underline::before{
+    position: absolute;
+    content: '';
+    top: 110%;
+    left: 0;
+    width: clamp(9.3rem, 12.6vw, 15rem);
+    height: 0.1rem;
+    border-radius: 0.5vw;
+    background-color: var(--ModerateCyan);
+}
+.underline:hover{
+    filter: brightness(130%);
+}
+.quote-box{
+    width: 54%;
+    margin: 4vw 0 0;
+    border-radius: 0.5vw;
+    box-shadow: 0 0 10px 1px rgb(191, 191, 191);
+    background-color: white;
+    padding: 2vw;
+    p{
+        font-size: clamp(0.7rem, 1.2vw, 0.9rem);
+    }
+    > img{
+        margin: 0 0 1vw;
+    }
+    .user-div{
+        display: flex;
+        align-items: center;
+        gap: 1vw;
+        margin: 1vw 0 0;
+        img{
+            width: 2.5vw;
+            height: 2.5vw;
+            border-radius: 50%;
+        }
+        .post{
+            font-size: clamp(0.6rem, 0.8vw, 0.8rem);
+            font-weight: 600;
+        }
+        strong{
+            font-size: clamp(0.8rem, 1.1vw, 1rem);
+            font-weight: 800;
+        }
+    }
+}
+button{
+    padding: 1vw 7vw;
+    border-radius: 0.25vw;
+    font-weight: 400;
+    border: none;
+    background-color: var(--BrightBlue);
+    color: white;
+    width: 20vw;
+    height: 3vw;
+    font-size: clamp(0.9rem, 1.3vw, 1.3rem);
+}
+button:hover{
+    cursor: pointer;
+    filter: brightness(140%);
+}
+
+.third-div{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 6vw;
+    background-color: var(--DarkBlueintroandemailsignupbackground);
+    width: 100%;
+    gap: 20vw;
+    background-color: var(--DesaturatedBlue);
+    h2, p{
+        color: white;
+    }
+    .third-left{
+        width: 50%;
+    }
+    form{
+        width: 50%;
+        display: flex;
+        flex-direction: column;
+        align-items: start;
+        height: fit-content;
+        gap: 2vw;
+        input{
+            border-radius: 0.25vw;
+            width: 100%;
+            padding: 0.8vw 2vw;
+            outline: none;
+            font-size: clamp(0.61rem, 1.1vw, 1.1rem);
+        }
+        button{
+            width: fit-content;
+            padding: 0.8vw 2vw;
+            font-size: clamp(0.61rem, 1.1vw, 1.1rem);
+        }
+    }
+}
+.input-div{
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    width: 100%;
+    input{
+        width: 100%;
+        height: 100%;
+    }
+    label{
+        position: absolute;
+        top: 100%;
+    }
+}
+.emailf{
+    color: red;
+}
+.emails{
+    color: white;
+}
+.error{
+    display: none;
+}
+.bottom-div{
+    padding: 6vw 6vw 4vw;
+    width: 100%;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    background-color: var(--VeryDarkBlue);
+    svg mask, path{
+        fill:white;
+    }
+    svg{
+        margin: 0 0 2vw;
+    }
+}
+.bottom-lower{
+    color: white;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    gap: 5vw;
+    padding-left: clamp(1rem, 3vw,2rem);
+    width: 100%;
+    > div:not(.socialPlatforms){
+        display: flex;
+        flex-direction: column;
+        align-items: start;
+        gap: 1vw;
+    }
+    .socialPlatforms{
+        display: flex;
+        align-items: start;
+        gap: 1vw;
+        .fa{
+            color: white;
+            text-decoration: none;
+            border: 2px solid white;
+            height: 2.5rem;
+            width: 2.5rem;
+            text-align: center;
+            border-radius: 50%;
+            padding: 0.7rem 0 0;
+        }
+    }
+}
+.bottom-second p{
+    position: relative;
+    display: flex;
+    align-items: start;
+    font-size: clamp(0.8rem, 1.1vw, 1rem);
+}
+.bottom-second img{
+    position: absolute;
+    left: clamp(-2rem, -3vw,-1rem);
+    top: 0.3vw;
+}
+.fa:hover{
+    cursor: pointer;
+    color: var(--ModerateCyan) !important;
+    border: 2px solid var(--ModerateCyan) !important;
+}
+.bottom-third p:hover, .bottom-fourth p:hover{
+    color: rgb(69, 69, 152);
+    -webkit-transition: 0.4s;
+    transition: 0.4s;
+    cursor: pointer;
+}
+footer{
+    position: absolute;
+    top: 99.3%;
+    z-index: 0;
+}
+@media screen and (max-width: 600px) {
+    p{
+        font-size: clamp(0.9rem, 4vw, 1.2rem);
+    }
+    .top{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 6vw;
+        width: 100%;
+        img{
+            width: 20vw;
+        }
+    }
+    .topright{
+        display: flex;
+        gap: 6vw;
+    }
+    .topright p:hover{
+        transition: 0.2s;
+        text-decoration: underline;
+        font-weight: 700;
+        cursor: pointer;
+    }
+    h1{
+        font-size: clamp(2rem, 6vw, 3rem);
+        line-height: clamp(2.8rem, 6vw, 3.8rem);
+        margin: 0 0 2vw;
+    }
+    h2{
+        font-size: clamp(1.2rem, 5vw, 2rem);
+        line-height: clamp(1.7rem, 5vw, 2rem);
+        margin: 0 0 5vw;
+    }
+    .first-div{
+        display: grid;
+        grid-template-columns: 100%;
+        width: 100%;
+        padding: 16vw 6vw;
+        text-align: center;
+        > div{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+        img{
+            width: 100%;
+            grid-row: 1;
+        }
+        p{
+            margin: 0 0 6vw;
+            padding: 0 2vw 0 0;
+            font-size: clamp(0.9rem, 3.7vw, 1.4rem);
+            font-weight: 500;
+        }
+        form{
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+            gap: 5vw;
+            input{
+                height: 9vw;
+                border-radius: 1vw;
+            }
+        }
+    }
+    .second-div{
+        background: url(./images/bg-curve-mobile.svg);
+        background-position: center top;
+        background-size: contain;
+        width: 100%;
+        padding: 25vw 6vw;
+        margin: 8vw 0 0;
+        display: grid;
+        grid-template-columns: 100%;
+        position: relative;
+        .second-left{
+            h1{
+                margin:  15vw 0 5vw;
+                font-size: clamp(1.4rem, 2vw, 2rem);
+                text-align: center;
+            }
+            >p{
+                margin: 0 0 3vw;
+                padding: 0;
+            }
+        }
+        >img{
+            grid-row: 1;
+        }
+    }
+    .second-div::before{
+        position: absolute;
+        top: 10vw;
+        height: calc(100% - 10vw);
+    }
+    .underline{
+        gap: 1vw;
+        svg{
+            width: 1.3rem;
+        }
+    }
+    .underline::before{
+        width: clamp(12.4rem, 16vw, 15rem);
+    }
+    .second-lower{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .quote-box{
+        width: 85%;
+        margin: 12vw 0 0;
+        border-radius: 1vw;
+        padding: 6vw 7vw;
+        p{
+            font-size: clamp(0.7rem, 4vw, 0.9rem);
+            font-weight: 500;
+        }
+        > img{
+            margin: 0 0 1vw;
+        }
+        .user-div{
+            gap: 2vw;
+            margin: 3vw 0 0;
+            img{
+                width: 7vw;
+                height: 7vw;
+            }
+        }
+    }
+    button{
+        padding: 1vw 7vw;
+        border-radius: 1vw;
+        width: 100%;
+        height: 9vw;
+        font-size: clamp(0.9rem, 3vw, 1.3rem) !important;
+    }
+    .third-div{
+        flex-direction: column;
+        padding: 10vw 8vw;
+        width: 100%;
+        gap: 8vw;
+        text-align: center;
+        .third-left{
+            width: 100%;
+        }
+        form{
+            width: 80%;
+            display: flex;
+            flex-direction: column;
+            align-items: start;
+            height: fit-content;
+            gap: 4vw;
+            input{
+                border-radius: 0.75vw;
+                width: 100%;
+                height: 9vw;
+                font-size: clamp(0.9rem, 3vw, 1.3rem) !important;
+            }
+            button{
+                width: 100%;
+                padding: 0.8vw 2vw;
+            }
+        }
+    }
+    .error{
+        display: none;
+        font-size: 0.75rem;
+    }
+    .bottom-div{
+        padding: 6vw 6vw 8vw;
+        width: 100%;
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        align-items: start;
+        background-color: var(--VeryDarkBlue);
+        svg mask, path{
+            fill:white;
+        }
+        svg{
+            margin: 0 0 2vw;
+        }
+    }
+    .bottom-lower{
+        flex-direction: column;
+        justify-content: start;
+        gap: 8vw;
+        padding-left: 0;
+        > div:not(.socialPlatforms){
+            gap: 2vw;
+        }
+        .socialPlatforms{
+            justify-content: center;
+            gap: 3vw;
+        }
+    }
+    .bottom-second{
+        padding-left: clamp(1rem, 6vw,2rem);
+    }
+    .bottom-second img{
+        left: clamp(-2rem, -6vw,-1rem);
+    }
+}
